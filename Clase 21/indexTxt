@@ -1,0 +1,240 @@
+Que es una funcion?
+
+Frecuentemente vamos tener algunas líneas de código que necesitan ser ejecutadas varias veces y desde diferentes partes de nuestro programa. En vez de repetir el mismo código una y otra vez puedes crear una función (también conocidas como procedimientos o métodos) e invocarla cada vez que necesitemos ejecutar ese trozo de código. Por ejemplo si en un sistema de facturación web necesitamos tener que aplicar un descuento sobre un producto, y dicho descuento tiene que visualizarse en varias partes del sistema, entonces sería más conveniente crear una función que encapsula toda las líneas de código para calcular el descuento.
+
+tipos de funciones
+*declarativas {
+function saludar (){
+mostremos el return y una linea debajo del return (explicar que es el return)
+}
+
+
+*Funcion anonima
+porque es anonima? porque no tiene nombre (la estamos guardando dentro de una variable)
+
+const saludar2 = dunction (){
+
+}
+
+ cual es la diferencia entre una declarativa y una naonima?
+EJECUTAR LAS DOS FUNCIONES ANTES DE SER DECLARADAS( DEMOSTRAR QUE JS GUARDA LAS FUNCIONES EN UNA PILA )
+OSEA QUE LA FUNCION ANONIMA SOLO SE PUEDE EJECUTAR DESPUES DE DEFINIRLAS.
+OTRA ES QUE LA FUNCION DECLARATIVA PUEDE PISARSE (DEMOSTRAR EN CONSOLA)
+
+es por eso que los frameworks usan funciones anonimas.
+
+
+/////TAREA funcion anonima
+devolver suma de dos numeros
+recibirlos por parametros
+con console.log en una variable
+despues mostrar con el return   
+
+asignar la funcion a una variable!
+
+
+   
+
+///////Entonces cómo creamos una función…
+
+---crea un archivo llamado functions.js y escribe lo siguiente:
+
+function hello() {
+ console.log("Hola Mundo");
+}
+
+Para definir una función usamos la palabra reservada function, le damos un nombre (en este caso hello), abrimos y cerramos paréntesis (()). Después abrimos corchetes ({), escribimos el cuerpo de la función (el código que queremos ejecutar cuando sea invocada), y por último cerramos los corchetes }.
+
+Si ejecutamos este código usando la consola del navegador veremos que no aparece nada en la pantalla:
+
+Una característica de las funciones es que no se ejecutan hasta que alguien las invoque. Modifiquemos nuestro programa para invocarla:
+
+function hello() {
+ console.log("Hola Mundo");
+}
+​hello(); // acá la estamos invocamos
+
+////////vArgumentos o Parámetros
+Las funciones pueden recibir cero o más argumentos (o parámetros). Pensemos en los argumentos como variables que podemos utilizar dentro de la función. Utilizando argumentos podemos hacer por ejemplo una función reutilizable que salude a cualquier persona:
+
+
+
+
+function hello(name) {
+ console.log("Hola " + name);
+}
+
+hello("Emilse");
+hello("Damian");
+
+Si lo ejecutamos deberíamos ver lo siguiente:
+
+$ Hola Emilse
+$ Hola Damian
+
+Los argumentos se definen dentro de los paréntesis al declarar la función y se separan con coma.
+
+Ejemplo de función con 2 argumentos:
+
+function hello(firstName, lastName) {
+ console.log("Hola " + firstName + " " + lastName);
+}
+
+hello("Emilse", "Mendoza");
+hello("Damian", "Galetto");
+
+                                
+
+Si ejecutamos el código anterior deberíamos ver lo siguiente:
+
+$ Hola Emilse Mendoza
+$ Hola Damian Galetto
+
+En la función anterior hemos dispuesto que reciba 2 parámetros firstName y lastName, cada uno de ellos separados por (,) . De esta manera si quisiéramos podríamos pasar más parámetros a la función. En el cuerpo de la función se concatena los dos parámetros para mostrar un mensaje a través de la consola.                
+
+
+
+Retornar un valor
+Opcionalmente podemos retornar un valor desde la función utilizando la palabra clave return. Podemos modificar la función hello para que en vez de imprimir con console.log retorne una cadena de texto:
+
+function hello(name) {
+ return "Hola " + name;
+}
+var name = hello("Emilse"); // podemos asignar el valor de retorno a una variable
+console.log(name);
+
+
+// podemos llamar la función directamente en el parámetro de otra función.
+console.log(hello("Damian"));
+
+En vez de hacer el console.log dentro de la función lo hacemos cuando la invocamos (de lo contrario no aparecería nada en pantalla).
+
+En lo posible se recomienda retornar valores en vez de utilizar console.log dentro de las funciones. La razón es que retornar un valor hace la función más reutilizable. Ahora podemos utilizar esta función en otros contextos en donde no se utilice console.log para imprimir en la línea de comandos, como en una aplicación Web.
+
+El return es la última línea que se ejecuta de una función, cualquier código que se encuentre después de esa línea será ignorado. Por ejemplo:
+
+function hello(name) {
+ return "Hola " + name;
+ console.log("Esto nunca se va a imprimir");
+}
+console.log(hello("Emilse"));
+
+Si ejecutas este código deberás ver lo siguiente:
+
+$ Hola Emilse
+
+La última línea de la función nunca va a ser ejecutada porque la función siempre retorna antes de llegar a ella.
+
+Estructura de una función
+Recapitulemos lo que hemos visto hasta ahora. La sintaxis de una función es la siguiente:
+
+function <name>([arg1], [arg2], ...) {
+ // cuerpo de la función
+ return <valor de retorno>;
+}
+
+Lo que debes tener en cuenta:
+
+La función se crea con la palabra clave function.
+El nombre de la función tiene las mismas reglas de nombramiento que las variables: debe comenzar con $, _ o una letra, y después puede contener letras, dígitos, _ y $.
+La función puede tener cero o más argumentos dentro de los paréntesis que van después del nombre.
+Pensemos en los argumentos como variables que puedes utilizar en la función.
+Los valores de esos argumentos se definen cuando invocan la función.
+Cada argumento debe tener un nombre de una variable válido. Recordemos que el nombre de una variable debe comenzar con $, _ o una letra, y después puede contener letras, dígitos, _ y $.
+Podemos retornar un valor desde la función utilizando la palabra clave return.
+El valor de retorno debe ser un tipo válido de JavaScript: un número, una cadena de texto, un booleano, un arreglo, etc.
+Puedes almacenar el valor de retorno de una función en una variable o puedes invocar la función como parámetro de otra función.                
+
+//////////////
+
+*FUNCION FLECHA o arrow function
+esta se incorpora en la version ecmasript 6 (es una alternativa a la funcion anonima) es la que mas se esta usando
+
+convertimos una anonima a flecha
+
+const sumarValores= function() {
+return 25 +25;
+}
+
+Eliminar function
+agregar => despues de parentesis
+pero podemos simplificar mas (solo si retornamos un valor) quedaria asi:
+const sumarvalores = () => 23+ 23; 
+tambien reciben parametros
+const sumarvalores = (num1, num2) => num1+ num1; 
+
+supongamos que tenemos una funcion algo mas compleja:
+ const suma2 = function () {
+let valor = 100
+return 23 + 55 + valor;
+};
+convertir a arrow (en este caso como hay mas de una linea de codigo no podemos simplificarla)
+estas funciones se utilizan mucho, por ejemplo con react
+
+const getUser = func(){
+return{
+id
+nomre
+email}
+}
+ tarea, convertir a arrow
+para devolver un objeto sin return necesitamos envolver el objeto entre parentesis
+const getUser = () => ({id,nombre,email)]
+ 
+
+
+//////////SCOPE///////////
+
+que es el scope? 
+nos referimos al lugar donde vive esa variable o donde podemos acceder!
+dando mas seguridad a la app. delimitando el acceso a ciertas variables en ciertos momentos del desarrollo, ademas creamos un codigo mas robusto...
+
+scope global :
+una variable declarada fuara de cualquier funcion o bloque de codigo. ej
+
+let persona = {
+nombre
+direccion}
+
+accedemos desde consola para ver que podemos desde cualquier parte o funcion!
+comprobamos: 
+const getDatos =function (){
+console.log(`Nombre: ${}`)
+console.log(`Dir: ${}`)
+}
+
+ejecutar funcion y demostrar que si accede
+const saludar persona= function (){
+console.log(`ola, soy: ${persona.nombre}`)  
+
+
+Scope LOCAL
+una variable definida dentro de una funcion. entonces solo puedo acceder a ella dentro de la funcion.
+
+const saludar = function(){
+let nombre = pedro.
+console.log(`hola : ${nombre}`)
+}
+intentar acceder a nombre desde la consola.
+
+volviendo al scope global, vamos a crear dentro de getData un objeto persona, mostrar que ahora accede a persona dentro de get y no a persona global. ESTO PASA PORQUE JAVASCRIPT BUSCA PRIMERO DENTRO DE LA FUNCION, Y SI NO ESTA AHI ENTONCES BUSCA POR FUERA.
+
+
+VEAMOS A QUE ME REFIERO CON QUE LA VARIABLE ESTE DEFINIDA EN UN BLOQUE DE CODIGO EN EL SIGUIENT EEJEMPLO
+
+IF(TRUE){
+let alumno = marcos
+const profesor =  ale
+}
+
+que creen que va a pasar si hago un console.log de alumno o profesor? console.log
+
+cuando declaro una variable en un bloque de codigo como un if estas variables ya no son globales. pero podemos acceder a ellas dentro del bloque de codigo.
+
+
+
+
+
+
+
+ingresar datos por consola, diferentes maneras()

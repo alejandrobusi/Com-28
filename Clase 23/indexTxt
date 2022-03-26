@@ -1,0 +1,97 @@
+Creando juego Piedra Papel y Tijera
+○ https://github.com/mentorrolling/javascript-6i/blob/master/fundamentos/ejempl
+os/ppt.js
+● Usando un poco el DOM
+    ○ Mostrar como se usa Sweet Alert
+    ○ Mejorar los mensajes del juego Piedra, Papel y Tijera
+● Introducción a Objetos
+
+////objetos
+
+leer
+https://docs.google.com/presentation/d/12_DKD9hOt2p-LO6ugt_X_VCmC5k6BumtcSMXYf4xZ9Y/edit#slide=id.g60560bb2f1_0_1
+
+Los conceptos de la POO tienen origen en Simula 67, un lenguaje diseñado para hacer simulaciones, creado por Ole-Johan Dahl y Kristen Nygaard, del Centro de Cómputo Noruego en Oslo. En este centro se trabajaba en simulaciones de naves, que fueron confundidas por la explosión combinatoria de cómo las diversas cualidades de diferentes naves podían afectar unas a las otras. La idea surgió al agrupar los diversos tipos de naves en diversas clases de objetos, siendo responsable cada clase de objetos de definir sus "propios" datos y comportamientos. Fueron refinados más tarde en Smalltalk, desarrollado en Simula en Xerox PARC (cuya primera versión fue escrita sobre Basic) pero diseñado para ser un sistema completamente dinámico en el cual los objetos se podrían crear y modificar "sobre la marcha" (en tiempo de ejecución) en lugar de tener un sistema basado en programas estáticos.
+
+La POO se fue convirtiendo en el estilo de programación dominante a mediados de los años 1980, en gran parte debido a la influencia de C++, una extensión del lenguaje de programación C. Su dominación fue consolidada gracias al auge de las interfaces gráficas de usuario, para las cuales la POO está particularmente bien adaptada. En este caso, se habla también de programación dirigida por eventos.
+hacer un objeto mostrando los tipos de datos que podemos meter en un obj.
+
+let persona = {
+name: ale,
+peso: 77, 
+nacimiento: fecha,
+altura: 174
+ }
+
+ 
+que pasa con los array de objetos? 
+
+mostrar el arrar products y hacer ejemplo de unarray
+que hacemos cuando queremos guardar varios valores?
+creamos un array
+de numeros y los sumamos
+console.log([0] + [1]]
+recordar la diferencia entre largo e indice 
+
+let personas = [
+  {
+    name: "ale",
+    peso: 77, 
+    nacimiento: "fecha",
+    altura: 134
+  },
+  {
+    name: "marcos",
+    peso: 77, 
+    nacimiento: "fecha",
+    altura: 174
+  }
+]
+para que sirve? para almacenar varias personas
+
+console.log(personas[0])
+console.log(personas[1])
+que estamos haciendo? creando un array de objetos. en muchas ocaciones necesitamos guardar muchos objetos en un array.
+entonces ya tenemos dos personas en un array.
+
+VER DIAPO.
+
+como acceder?
+mostrar console.log(personas.nombre)
+console.log(personas[0].nombre)
+console.log(personas[1].edad)
+
+veamos que pasa si necesitamos buscar las alturas de las personas?
+
+personas.map(persona => console.log(`${persona.name} mide ${persona.altura}`));
+
+explicar que estamos haciendo. y lo vemos
+
+recuerden que es un objeto(definicion)
+
+preguntar a 4 personas como les fue con objetos
+
+recomendar el campus y alentar a los laumnos que veamos temas que no hayamos visto.
+
+hablarles de las respuestas de api y mostrar respuestas! mostras jsonplaceholder
+
+
+COMO RECORRER UN OBJ siempre va a ser un for o un map
+for () {
+console.group(products[i].name)
+console.log("precios: $" + products[i].price)
+console.groupEnd()
+}
+
+products.map(product => {
+console.group(products.name)
+console.log("precios: $" + product.price)
+console.groupEnd()
+}
+
+es importante saber hacer esto ya que cuando viene la data desde una api vienen muchisimos objetos y vienen en forma de array de objetos
+
+mostrar un ejemplo de array de obj
+y seguir con la diapo
+
+

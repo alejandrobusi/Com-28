@@ -1,0 +1,38 @@
+repaso de lo visto en la clase anterior
+
+que es un objeto. que es un array de objetos?
+
+como se conforma un objeto?
+
+como agregamos una propiedad?
+como eliminamos una propiedad?
+como modificamos una propiedad?
+
+como recorremos un array de objetos
+recorrer un objeto(averiguar)	 
+
+
+pagina 16 de javascript parte 3
+
+formas de crear un objeto:
+
+*connotacion literal(lo que veniamos haciendo hasta el momento)
+
+*funcion constructora(Una función constructora es una función normal y corriente de JavaScript que se utiliza para definir una especie de plantilla para nuestros objetos personalizados.)
+
+THIS = palabra reservada que se utiliza cuando queremos darle un valor a una propiedad a travez de su nombre.
+cuando veamos el this.marca hablamos de que es propio del objeto.  no confundir this.marca =  marca.
+cada vez que vean this relacionenlo con un objeto o la creacion de uno.
+
+hacer ejemplo de un software que introduzca los datos por parametros y nosotros creamos el objeto del cliente. envez de utilizar la connotacion literal, entonces es mas eficiente y es la forma en la que se utiliza. 
+
+
+*constructor Object()(crea un objeto vacio generico)
+
+esto no es lo ideal!!
+
+por lo gral es mejor la funci on constructora
+
+no se desalientennn, esto es cola chata!
+
+

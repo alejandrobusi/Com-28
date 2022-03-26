@@ -1,0 +1,23 @@
+dm
+
+repaso muy gral, creando arcivo js y enlazado, tipos de datos {
+practicas vs}
+if{
+if else= condicional compuesta
+EXPLICAR CONDICIONALES
+estrictamente igual(number y string) ampliar el nivel de validacion de el if
+diferente de
+mayor menos que
+and 
+or((n1 || n2 ) > n3)
+}
+tipos de console.log
+if anidados
+
+switch CASE{
+ejemplo con meses
+ver default(valor predeterminado si no es ningun caso)
+}
+
+declarar error despues del if
+
