@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON & LocalStorage</title>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+   
+  <input type="text" id="peli" placeholder="Nombre de pelicula"></input> <br>
+  <input type="text" id="puntaje" placeholder="Puntaje"></input> <br>
+  <button onclick="peliculas.addMovie(peli, puntaje)">Guardar pelicula</button> <br>
+  <button onclick="peliculas.getMovies()">Mostrar lista</button> <br>
+  <button onclick="peliculas.deleteMovies()">Eliminar peliculas</button>
+
+
+
+</body>
+</html>
