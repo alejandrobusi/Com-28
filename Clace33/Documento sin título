@@ -1,0 +1,23 @@
+repaso de promesas
+
+
+fetch!!
+
+La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. También provee un método global fetch() (en-US) que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+con el fetch se apunta a una url a la que queremos acceder.. queremos que nos devuelva algo o hacer algo sobre ella!
+
+const apiKey = ""
+const peticion = fetch('url')
+.then((resp) => resp.json))
+.then(({data}) => {})
+catch
+
+
+
+async await
+
+getImagen = async()=>{
+const peticion = await fetch(url)
+const data = await peticion.json()
+return data
+}

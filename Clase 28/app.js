@@ -66,7 +66,7 @@ const PCard = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
 const imgCard = "https://picsum.photos/id/1/200/300"
 
 
-document.body.innerHTML = `<div class="card" style="width: 18rem;">
+/*document.body.innerHTML = `<div class="card" style="width: 18rem;">
 <img src=${imgCard} class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">${titleCard}</h5>
@@ -74,6 +74,7 @@ document.body.innerHTML = `<div class="card" style="width: 18rem;">
   <a href="#" class="btn btn-primary">Go somewhere</a>
 </div>
 </div>`;
+*/
 
 //Primer paso : crear elemento.
 const exampleDom = document.createElement('h1')
@@ -83,3 +84,32 @@ exampleDom.innerHTML = "Hola Mundo!"
 document.body.appendChild(exampleDom)
 
 console.log(exampleDom)
+
+const personajes = null
+const getData = async () => {
+  
+  const response = await fetch('https://rickandmortyapi.com/api/character')
+    const data = await response.json();
+
+    data.results.map((personaje) => {
+      let contenedor = document.createElement("div")
+      contenedor.classList = ""
+      let card = `<div class="card col-4" style="width: 18rem;">
+      <img src=${personaje.image} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${personaje.name}</h5>
+        <p class="card-text">Origen: ${personaje.origin.name}</p>
+        <p class="card-text">Link: ${personaje.origin.url}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      </div>`
+      contenedor.innerHTML = card
+      document.querySelector("#container").appendChild(contenedor)
+    })
+    
+      
+    } 
+
+getData().then(console.log)
+  
+

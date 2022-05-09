@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "Modificado con PUT",
+      "author": "by Ale"
+    },
+    {
+      "title": "Modificado con PUT, no olvidar los headers",
+      "author": "by Ale",
+      "id": 3
+    },
+    {
+      "title": "Post by Json-Server",
+      "author": "Ale Busi",
+      "id": 4
+    },
+    {
+      "title": "Editado con PATCH",
+      "author": "By Maciel",
+      "colorFavorito": "rojo",
+      "id": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
